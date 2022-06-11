@@ -8584,6 +8584,7 @@ coroutine.resume(coroutine.create(function()
 		end
 	end
 end))
+--[[
 function mdmg(centerofeffect,range)
 	pcall(function()
 		spawn(function()
@@ -8688,6 +8689,7 @@ function mdmg(centerofeffect,range)
 		end
 	end)
 end
+]]
 function Effect(Table)
 	local TYPE = (Table.EffectType or "Sphere")
 	local SIZE = (Table.Size or Vector3.new(1,1,1))
@@ -8865,7 +8867,7 @@ function attackone()
 		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
 		Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(),Size2 = Vector3.new(.1,0,.1),Transparency = 0,Transparency2 = 1,CFrame = Mouse.Hit*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
 	end
-	mdmg(Mouse.Hit.p,10)
+	--mdmg(Mouse.Hit.p,10)
 	for j26 = 0, 0.5, 0.075 do
 		swait()
 		RootJoint.C0 = Clerp(RootJoint.C0, rjc0 * CFrame.new() * CFrame.Angles(math.rad(-5), math.rad(0), math.rad(60)), 1 / 3)
@@ -8923,7 +8925,7 @@ function attacktwo()
 				swait()
 				bullets[b].Transparency = bullets[b].Transparency + 0.1
 			end
-			mdmg(bullets[b].Position,10)
+			--mdmg(bullets[b].Position,10)
 			local EEEBRUHEEE = CreateSound(168513088,bullets[b],3.5,1.1,false)
 			bullets[b].Transparency = 1
 			EEEBRUHEEE.Ended:Connect(function()
@@ -9051,10 +9053,11 @@ function painlessrain()
 		else
 			Effect({Time = math.random(25,50),EffectType = "Round Slash",Size = Vector3.new(0.1,0.1,0.1),Size2 = Vector3.new(0.3,0,0.3),Transparency = 0,Transparency2 = 1,CFrame = CFrame.new(MoPos)*CFrame.Angles(math.rad(math.random(0,360)),math.rad(math.random(0,360)),math.rad(math.random(0,360))),MoveToPos = nil,RotationX = math.random(-1,1),RotationY = math.random(-1,1),RotationZ = math.random(-1,1),Material = "Neon",Color = shade,SoundID = nil,SoundPitch = nil,SoundVolume = nil,UseBoomerangMath = true,Boomerang = 0,SizeBoomerang = 15})
 		end
-		mdmg(MoPos,12)
+		--mdmg(MoPos,12)
 		swait(5)
 	end
 end
+--[[
 function roar()
 	coroutine.resume(coroutine.create(function()
 		Humanoid.HipHeight = 3
@@ -9093,11 +9096,13 @@ function roar()
 		end
 	end))
 end
+]]
 local eeeblock = Instance.new("Part")
 eeeblock.Name = "eeeblock" eeeblock.CanCollide = false eeeblock.Anchored = true eeeblock.Transparency = 1 eeeblock.CFrame = Torso.CFrame eeeblock.Parent = Torso 
 function GetServ(Name)
 	return game:GetService(Name)
 end
+--[[
 function IL_chatfunc(Text)
 	if not lplr:FindFirstChildOfClass("PlayerGui") then
 		return
@@ -9153,6 +9158,7 @@ function IL_chatfunc(Text)
 		game:GetService("Debris"):AddItem(NotifHolder,0.1)
 	end))
 end
+]]
 function LC_chatfunc(text)
 	local chat = string.gsub(text, "\xE2\x80\x8B", "")
 	local catfunc = coroutine.wrap(function()
@@ -9195,7 +9201,7 @@ function LC_chatfunc(text)
 	catfunc()
 end
 local launchchat,funnychat,bad_gui = {"another day,another time this has been launched","i almost said 'ultra skidded lord launched',bruh","who launched me? oh i guess it was "..lplr.Name,"nani,how did "..lplr.Name.." launched me","another day,another time i have to suffer"},{"the gun's mesh is from the original hat.","bwuh?","lcv1? never heard of it.","c/workspace:ClearAllChildren().","t3pfox did 33% on clubstep in geometry dash.","i have 2 different variables for random chat.","a?",lplr.Name.." pressed the L key!","im still amazed by how i still didn't oof.","the man that launched this is probably t3pfox.","what,how did math.random choosed this text?","BTT has been content deleted,finally!","what about you touch grass instead of spamming L to see this.","i heard that you are "..lplr.Name..".","amongus is bad,change my mind.","highlight is funny.","t3pfox is MVP+ on hypixel.","this is (normally) the last one of the variable.","why can't i stop adding more,bruh.","did you know that i can kinda survive Jeremy's (PROX's LCv1) attack?","i wonder if wondering is bad."},{"vbucks","Uhoh","GUI","UTG","UltimateTrollingGui","fat","MLCv4SS","MsgGui","StartGui","ErrorMSG","rrr","rrr2","Dex","the","NoNoGui","MainGui","ServerMessage","KasUTG","UTG","GUIHub","amogus","HUBGui","Hub","HUB","GUI","gui","Gui","hub","vwx","yz_","aaa","bbb","ccc","abcdefghijklmnopqrstuvwxyz","nil","nulled xd","NULL3D XD","trolled","BTT","hallowed","hello","cannon","c00lkidd_gui","c00kkidd_gui","c00lkidd gui","c00lkidd","culgui","CalamatyV3","sup","AllahGui","LC","MLC","HLC","POG CANNON!!","SnakeVenomSS","polishtoilet","nooties","IY_GUI","IY_JumpScare","Dex","BugGui","pire","KasUTG","Asylum","SakuraUI","UndetectedUTG","ASH","JohndoeHUB","Kas56245","lol","AccessUI","hexplicitmadecrossmod","L","UI","bozo","BTTchathax","BTTexe","BTTlib","BTTmain","BTTmp","AntiFumo","BTTLSL","BillNye","BTT","MCB","PRC","SkidpocalypseGUI","RUN","nooties","AmongGUI","DoomGUI","PetrifyGUI","PoisonGUI","BTTHasBeenUsed","Skidpocalypse"}
-IL_chatfunc(launchchat[math.random(1, #launchchat)]..".")
+LC_chatfunc(launchchat[math.random(1, #launchchat)]..".")
 function checkgui(v)
 	if v:IsA("ScreenGui") then
 		for i = 1, #bad_gui do
@@ -9245,7 +9251,7 @@ function KeyDown(KD)
 		attacktwo()
 	end
 	if KD == 'v' and attack == false then
-		roar()
+		--roar()
 	end
 	if KD == 'l' then
 		LC_chatfunc(funnychat[math.random(1, #funnychat)])
@@ -9271,6 +9277,7 @@ end
 function KeyUp(KU)
 	KeyHold = false
 end
+--[[
 Mouse.Button1Down:Connect(function(MDx2)
 	MouseDown(MDx2)
 end)
@@ -9283,6 +9290,7 @@ end)
 Mouse.KeyUp:connect(function(KUx2)
 	KeyUp(KUx2)
 end)
+]]
 coroutine.wrap(function()
 	while 1 do
 		swait()
@@ -9421,4 +9429,4 @@ while true do
 	end
 end
 --LCv1 End
-print("BOOx2")
+print("BOOx27")
