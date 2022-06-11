@@ -50,9 +50,11 @@ MeshPart2.Orientation = Vector3.new(1.899999976158142, -85.37999725341797, 129.6
 MeshPart2.Position = Vector3.new(-232.55450439453125, 0.036263465881347656, -99.09625244140625)
 MeshPart2.Rotation = Vector3.new(22.389999389648438, -85, 151.9600067138672)
 MeshPart2.Color = Color3.new(0, 0, 0)
+MeshPart2.MeshId = "rbxassetid://6080721391"
 MeshPart2.Size = Vector3.new(9.361000061035156, 8.616999626159668, 1.4739999771118164)
 MeshPart2.BrickColor = BrickColor.new("Really black")
 MeshPart2.CanCollide = false
+MeshPart2.Massless = true
 MeshPart2.Locked = true
 MeshPart2.Material = Enum.Material.Neon
 MeshPart2.brickColor = BrickColor.new("Really black")
@@ -9429,4 +9431,4 @@ while true do
 	end
 end
 --LCv1 End
-print("BOOx27")
+print("BOOx289")
